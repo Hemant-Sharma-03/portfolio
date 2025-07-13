@@ -1,3 +1,21 @@
+window.onload = function() {
+  const text = "Exploring Code & Logic";
+  const element = document.getElementById("type-text");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 70);
+    }
+  }
+
+  type();
+};
+
+
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -20,6 +38,8 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     });
 }
+
+
 
 const filterProjects = () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
